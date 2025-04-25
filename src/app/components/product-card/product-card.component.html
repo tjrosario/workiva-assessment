@@ -1,0 +1,18 @@
+<div class="card h-100">
+  <img
+    src="{{ product.image }}"
+    class="card-img-top"
+    alt="{{ product.description }}"
+  />
+  <div class="card-body">
+    <h3 class="card-title">{{ product.name }}</h3>
+    <h5 class="card-subtitle mb-2 text-body-secondary">${{ product.price }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+
+  <div class="card-footer" *ngIf="readOnly === false">
+    <button (click)="viewDetails()" class="btn btn-primary mt-auto">
+      View Details
+    </button>
+  </div>
+</div>

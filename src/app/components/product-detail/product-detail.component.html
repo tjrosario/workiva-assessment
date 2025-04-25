@@ -1,0 +1,17 @@
+<ng-container *ngIf="product">
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/products">Products</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        {{ product.name }}
+      </li>
+    </ol>
+  </nav>
+
+  <div class="product-detail d-flex justify-content-center">
+    <div class="product">
+      <app-product-card [product]="product" readOnly> </app-product-card>
+    </div>
+  </div>
+</ng-container>
